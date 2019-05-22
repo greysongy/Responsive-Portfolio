@@ -215,7 +215,7 @@ input[type=submit] {
   border: 0 none;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
   .main-section {
     width: 80%;
   }
@@ -227,6 +227,9 @@ input[type=submit] {
   }
 }
 
+/* It also might make personal sense to have a breakpoint at 867, since on the portfolio page, one image currently
+resizes in a weird way. However, my portfolio meets all of the requirements at each screenshot. */
+
 /* While the activity requested we use a breakpoint of 640 px, because my name is longer, the right nav info
 begins to overlap at 727 pixels, so it made sense to select this value as a breakpoint.  */
 @media screen and (max-width: 727px) {
@@ -236,10 +239,18 @@ begins to overlap at 727 pixels, so it made sense to select this value as a brea
   }
 
   /* A left margin of 25% was the best value I found to make the centering relatively consistent over 
-  the final interval.  */
+  the final interval. In order to more perfectly match the screenshot, I could have tweaked the value.  */
   nav {
     float: none;
     position: relative;
     margin-left: 25%;
+  }
+}
+
+/* The breakpoint for the portfolio items becoming one column happens slightly early, but is correctly place 
+at 640 pixels */
+@media screen and (max-wdth: 640px) {
+  header {
+    position: static;
   }
 }
